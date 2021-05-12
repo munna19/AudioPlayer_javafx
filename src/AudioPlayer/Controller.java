@@ -3,6 +3,7 @@ package AudioPlayer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,6 +16,14 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
+    @FXML
+    private Button previous_button_id;
+
+    @FXML
+    private Button play_button_id;
+
+    @FXML
+    private Button next_button_id;
 
 
     @FXML
