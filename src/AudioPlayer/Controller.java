@@ -142,7 +142,10 @@ public class Controller implements Initializable {
 
     @FXML
     void PreviousButtonAction(ActionEvent event) {
-
+        //for duration backward
+        double d = player.getCurrentTime().toSeconds();
+        d = d - 10;
+        player.seek(new Duration(d * 1000));
     }
 
     @FXML
