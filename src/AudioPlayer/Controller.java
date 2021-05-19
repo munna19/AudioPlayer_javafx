@@ -134,7 +134,10 @@ public class Controller implements Initializable {
 
     @FXML
     void NextButtonAction(ActionEvent event) {
-
+        //for duration forward
+        double d = mediaPlayer.getCurrentTime().toSeconds();
+        d = d + 10;
+        mediaPlayer.seek(new Duration(d * 1000));
     }
 
     @FXML
