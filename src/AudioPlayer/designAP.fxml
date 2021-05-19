@@ -12,6 +12,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="395.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AudioPlayer.Controller">
    <children>
@@ -51,13 +52,16 @@
                   </MenuButton>
                   <HBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="324.0">
                      <children>
-                        <Label prefHeight="40.0" prefWidth="256.0" text="Label">
+                        <Label fx:id="label_id" prefHeight="40.0" prefWidth="256.0">
                            <padding>
                               <Insets right="10.0" />
                            </padding>
                            <HBox.margin>
                               <Insets right="20.0" />
                            </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
                         </Label>
                         <Button mnemonicParsing="false" />
                      </children>
