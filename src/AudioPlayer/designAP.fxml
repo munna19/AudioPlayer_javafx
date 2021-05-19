@@ -48,6 +48,7 @@
                            </graphic>
                         </MenuItem>
                         <MenuItem mnemonicParsing="false" onAction="#Reset_Action" text="Reset" />
+                        <MenuItem mnemonicParsing="false" onAction="#Exit_Action" text="Exit" />
                     </items>
                   </MenuButton>
                   <HBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="324.0">
