@@ -1,5 +1,6 @@
 package AudioPlayer;
 
+import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.value.ChangeListener;
@@ -174,7 +175,7 @@ public class Controller implements Initializable {
 
     @FXML
     void Exit_Action(ActionEvent event) {
-
+        Platform.exit();
     }
 
     @Override
