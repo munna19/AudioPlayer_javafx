@@ -70,6 +70,8 @@ public class Controller implements Initializable {
             media = new Media(selectedFile.toURI().toString());
 
             mediaPlayer = new MediaPlayer(media);
+            //System.out.println(media);
+            System.out.println(mediaPlayer);
 
 
             //all operation relies
@@ -162,6 +164,6 @@ public class Controller implements Initializable {
             e.printStackTrace();
         }
 
-        songs = new ArrayList<File>();
+        //songs = new ArrayList<File>();
     }
 }
