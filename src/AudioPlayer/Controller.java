@@ -71,7 +71,7 @@ public class Controller implements Initializable {
 
             mediaPlayer = new MediaPlayer(media);
             //System.out.println(media);
-            System.out.println(mediaPlayer);
+            //System.out.println(mediaPlayer);
 
 
             //all operation relies
