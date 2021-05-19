@@ -129,7 +129,21 @@ public class Controller implements Initializable {
 
     @FXML
     void PlayButton_Action(ActionEvent event) {
-        mediaPlayer.play();
+        //mediaPlayer.play();
+        try {
+            MediaPlayer.Status status = mediaPlayer.getStatus();
+            if(status == MediaPlayer.Status.PLAYING){
+                mediaPlayer.pause();
+                play_button_id.setGraphic(new ImageView(new Image(new FileInputStream("src/icons/play.png"))));
+            }
+            else {
+                mediaPlayer.play();
+                play_button_id.setGraphic(new ImageView(new Image(new FileInputStream("src/icons/pause.png"))));
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -143,9 +157,9 @@ public class Controller implements Initializable {
     @FXML
     void PreviousButtonAction(ActionEvent event) {
         //for duration backward
-        double d = player.getCurrentTime().toSeconds();
+        double d = mediaPlayer.getCurrentTime().toSeconds();
         d = d - 10;
-        player.seek(new Duration(d * 1000));
+        mediaPlayer.seek(new Duration(d * 1000));
     }
 
     @FXML
@@ -155,6 +169,11 @@ public class Controller implements Initializable {
 
     @FXML
     void Speed_Action(ActionEvent event) {
+
+    }
+
+    @FXML
+    void Exit_Action(ActionEvent event) {
 
     }
 
