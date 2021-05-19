@@ -4,8 +4,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 
 import java.io.FileInputStream;
 import java.net.URL;
@@ -20,6 +23,12 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable {
 
     @FXML
+    private Slider timer_slider_id;
+
+    @FXML
+    private ComboBox<?> speed_box_id;
+
+    @FXML
     private Button previous_button_id;
 
     @FXML
@@ -27,6 +36,11 @@ public class Controller implements Initializable {
 
     @FXML
     private Button next_button_id;
+
+    @FXML
+    void Add_music_Action(ActionEvent event) {
+
+    }
 
 
     @FXML
@@ -41,6 +55,16 @@ public class Controller implements Initializable {
 
     @FXML
     void PreviousButtonAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void Reset_Action(ActionEvent event) {
+
+    }
+
+    @FXML
+    void Speed_Action(ActionEvent event) {
 
     }
 

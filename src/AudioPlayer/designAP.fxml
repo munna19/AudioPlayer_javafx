@@ -19,7 +19,7 @@
          <bottom>
             <VBox prefHeight="97.0" prefWidth="403.0" BorderPane.alignment="CENTER">
                <children>
-                  <Slider />
+                  <Slider fx:id="timer_slider_id" prefHeight="14.0" prefWidth="394.0" />
                   <HBox alignment="CENTER" prefHeight="126.0" prefWidth="403.0">
                      <children>
                         <Button fx:id="previous_button_id" mnemonicParsing="false" onAction="#PreviousButtonAction" />
@@ -27,7 +27,10 @@
                         <Button fx:id="next_button_id" mnemonicParsing="false" onAction="#NextButtonAction" />
                      </children>
                   </HBox>
-               </children></VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="5.0" />
+               </BorderPane.margin></VBox>
          </bottom>
          <center>
             <ProgressBar prefHeight="213.0" prefWidth="348.0" progress="0.0" BorderPane.alignment="CENTER" />
@@ -37,13 +40,13 @@
                <children>
                   <MenuButton mnemonicParsing="false" text="Menu">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="Add music" />
+                      <MenuItem mnemonicParsing="false" onAction="#Add_music_Action" text="Add music" />
                       <MenuItem mnemonicParsing="false" text="Speed">
                            <graphic>
-                              <ComboBox prefWidth="150.0" />
+                              <ComboBox fx:id="speed_box_id" onAction="#Speed_Action" prefWidth="150.0" />
                            </graphic>
                         </MenuItem>
-                        <MenuItem mnemonicParsing="false" text="Reset" />
+                        <MenuItem mnemonicParsing="false" onAction="#Reset_Action" text="Reset" />
                     </items>
                   </MenuButton>
                   <HBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="324.0">
