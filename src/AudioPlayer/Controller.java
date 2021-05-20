@@ -70,15 +70,16 @@ public class Controller implements Initializable {
             File selectedFile = fc.showOpenDialog(null);
             media = new Media(selectedFile.toURI().toString());
 
+            //all operation relies
+            if(mediaPlayer != null){
+                mediaPlayer.dispose();
+            }
+
             mediaPlayer = new MediaPlayer(media);
             //System.out.println(media);
             //System.out.println(mediaPlayer);
 
 
-            //all operation relies
-            /*if(mediaPlayer != null){
-                mediaPlayer.dispose();
-            }*/
 
         }
         catch(Exception e){
@@ -125,6 +126,11 @@ public class Controller implements Initializable {
                 }
             }
         });
+
+        //speed set
+        //Speed_Action(null);
+        //mediaPlayer.setRate(0);
+        speed_box_id.setValue(null);
     }
 
 
