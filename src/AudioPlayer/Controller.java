@@ -130,6 +130,7 @@ public class Controller implements Initializable {
 
     @FXML
     void PlayButton_Action(ActionEvent event) {
+        Speed_Action(null);
         //mediaPlayer.play();
         try {
             MediaPlayer.Status status = mediaPlayer.getStatus();
@@ -170,8 +171,13 @@ public class Controller implements Initializable {
 
     @FXML
     void Speed_Action(ActionEvent event) {
-        //mediaPlayer.setRate(Integer.parseInt(speed_box_id.getValue()) * 0.01);
-        mediaPlayer.setRate(Integer.parseInt(speed_box_id.getValue().substring(0,speed_box_id.getValue().length()-1)) * 0.01);
+        if(speed_box_id.getValue() ==null){
+            mediaPlayer.setRate(1);
+        }
+        else {
+            //mediaPlayer.setRate(Integer.parseInt(speed_box_id.getValue()) * 0.01);
+            mediaPlayer.setRate(Integer.parseInt(speed_box_id.getValue().substring(0,speed_box_id.getValue().length()-1)) * 0.01);
+        }
     }
 
     @FXML
