@@ -191,5 +191,8 @@ public class Controller implements Initializable {
         }
 
         //songs = new ArrayList<File>();
+        for(int i=0; i< speeds.length; i++){
+            speed_box_id.getItems().add(Integer.toString(speeds[i]));
+        }
     }
 }
