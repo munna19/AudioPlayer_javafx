@@ -165,7 +165,7 @@ public class Controller implements Initializable {
 
     @FXML
     void Reset_Action(ActionEvent event) {
-
+        mediaPlayer.seek(Duration.seconds(0));
     }
 
     @FXML
