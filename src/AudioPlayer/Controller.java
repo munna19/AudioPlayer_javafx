@@ -170,7 +170,8 @@ public class Controller implements Initializable {
 
     @FXML
     void Speed_Action(ActionEvent event) {
-
+        //mediaPlayer.setRate(Integer.parseInt(speed_box_id.getValue()) * 0.01);
+        mediaPlayer.setRate(Integer.parseInt(speed_box_id.getValue().substring(0,speed_box_id.getValue().length()-1)) * 0.01);
     }
 
     @FXML
@@ -192,7 +193,8 @@ public class Controller implements Initializable {
 
         //songs = new ArrayList<File>();
         for(int i=0; i< speeds.length; i++){
-            speed_box_id.getItems().add(Integer.toString(speeds[i]));
+            speed_box_id.getItems().add(Integer.toString(speeds[i]) + "%");
         }
+        speed_box_id.setOnAction(this::Speed_Action);
     }
 }
